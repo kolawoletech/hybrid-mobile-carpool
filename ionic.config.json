@@ -1,5 +1,6 @@
 {
   "name": "hybrid-mobile-carpool",
   "app_id": "",
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "integrations": {}
 }
