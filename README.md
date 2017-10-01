@@ -31,6 +31,7 @@ Clone this repository and start the application by using the command below:
 ```bash
 $ git clone https://github.com/silapinbenz/hybrid-mobile-carpool.git
 $ cd hybrid-mobile-carpool
+$ npm install
 $ ionic serve
 ```
 
