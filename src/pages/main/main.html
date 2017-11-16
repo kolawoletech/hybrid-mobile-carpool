@@ -1,0 +1,76 @@
+<ion-header>
+
+  <ion-navbar>
+
+    <button ion-button
+            menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Carpooling</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-grid class="main-grid">
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <ion-list no-lines>
+
+              <button ion-item
+                      (click)="onChooseLocation(0)">
+                <ion-icon name="return-right"
+                          item-left></ion-icon>
+                Your location
+              </button>
+
+              <hr>
+
+              <button ion-item
+                      (click)="onChooseLocation(1)">
+                <ion-icon name="pin"
+                          item-left></ion-icon>
+                Destination
+              </button>
+
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row padding>
+      <ion-col col-auto class="main-passengers-container">
+        <!--<ion-item>-->
+        <ion-icon name="people"
+                  class="main-icon-passengers"></ion-icon>
+        <ion-input [(ngModel)]="numberOfPassengers"
+                   class="main-input"
+                   type="tel"
+                   maxlength="2"></ion-input>
+        <!--</ion-item>-->
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div #map id="map"></div>
+
+</ion-content>
+
+<ion-footer>
+  <div class="main-button-container">
+    <button ion-button
+            class="main-button"
+            (click)="onFindJourney()">Find
+    </button>
+    <button ion-button
+            class="main-button"
+            (click)="onCreateJourney()">Create
+    </button>
+  </div>
+</ion-footer>

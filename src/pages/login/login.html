@@ -1,0 +1,51 @@
+<!--<ion-header>-->
+
+<!--<ion-navbar>-->
+<!--<ion-title>login</ion-title>-->
+<!--</ion-navbar>-->
+
+<!--</ion-header>-->
+
+<ion-content padding>
+  <div>
+    <img
+      class="login-app-logo"
+      src="https://easydrawingguides-7512.kxcdn.com/wp-content/uploads/2017/01/How-to-Draw-a-cartoon-car-20.png">
+  </div>
+
+  <!--<ion-item>-->
+    <!--<ion-input type="email"-->
+               <!--placeholder="Username"></ion-input>-->
+  <!--</ion-item>-->
+
+  <!--<ion-item>-->
+    <!--<ion-input type="password"-->
+               <!--placeholder="Password"></ion-input>-->
+  <!--</ion-item>-->
+
+  <!--<button ion-button block-->
+          <!--color="button"-->
+          <!--class="login-button"-->
+          <!--(click)="onSignInClick()">Sign In-->
+  <!--</button>-->
+
+  <button ion-button
+          block
+          icon-start
+          color="google-button"
+          class="login-button"
+          (click)="onGoogleClick()">
+    <ion-icon name="logo-googleplus"></ion-icon>
+    Google Sign In
+  </button>
+
+  <button ion-button
+          block
+          icon-start
+          color="facebook-button"
+          class="login-button"
+          (click)="onFacebookClick()">
+    <ion-icon name="logo-facebook"></ion-icon>
+    Facebook Login
+  </button>
+</ion-content>
