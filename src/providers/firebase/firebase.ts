@@ -28,7 +28,7 @@ export class FirebaseProvider {
     this.afd.list('journeys').push(journey);
   }
   //
-  // getJourneys() {
-  //   return this.afs.object('journeys').valueChanges();
-  // }
+  getJourneys() {
+    return this.afd.list('journeys').valueChanges();
+  }
 }

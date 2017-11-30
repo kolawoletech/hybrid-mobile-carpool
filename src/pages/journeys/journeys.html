@@ -14,5 +14,18 @@
 
 
 <ion-content padding>
-
+  <ion-list>
+    <div ion-item *ngFor="let item of journeys" (click)="onChooseJourney(item)">
+      <div style="float: left">
+        <ion-icon name="return-right"
+                  item-left></ion-icon>
+        <label>{{ item.pickupLocation.placeName }}</label>
+      </div>
+      <div style="float: left">
+        <ion-icon name="pin"
+                  item-left></ion-icon>
+        <label>{{ item.dropoffLocation.placeName }}</label>
+      </div>
+    </div>
+  </ion-list>
 </ion-content>
