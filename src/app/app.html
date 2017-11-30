@@ -1,1 +1,20 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="navigation">
+  <ion-header>
+    <ion-toolbar>
+      <!--<img src="https://easydrawingguides-7512.kxcdn.com/wp-content/uploads/2017/01/How-to-Draw-a-cartoon-car-20.png"-->
+           <!--class="app-img-circle">-->
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button ion-item
+              no-lines (click)="onLoadPage(historyPage)">
+        <ion-icon name="time"
+                  item-left></ion-icon>
+        History
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #navigation></ion-nav>

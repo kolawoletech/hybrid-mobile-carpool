@@ -21,10 +21,33 @@
     "@angular/platform-browser": "4.4.3",
     "@angular/platform-browser-dynamic": "4.4.3",
     "@ionic-native/core": "3.12.1",
+    "@ionic-native/facebook": "^4.3.1",
+    "@ionic-native/firebase": "^4.3.2",
+    "@ionic-native/geolocation": "^4.4.0",
+    "@ionic-native/google-maps": "^4.4.0",
+    "@ionic-native/google-plus": "^4.3.1",
+    "@ionic-native/native-storage": "^4.4.2",
     "@ionic-native/splash-screen": "3.12.1",
     "@ionic-native/status-bar": "3.12.1",
     "@ionic/storage": "2.0.1",
+    "angularfire2": "^5.0.0-rc.4",
+    "cordova-android": "^6.2.3",
+    "cordova-ios": "^4.4.0",
+    "cordova-plugin-compat": "^1.2.0",
+    "cordova-plugin-device": "^1.1.4",
+    "cordova-plugin-facebook4": "^1.9.1",
+    "cordova-plugin-firebase": "^0.1.24",
+    "cordova-plugin-geolocation": "^2.4.3",
+    "cordova-plugin-googlemaps": "^2.0.11",
+    "cordova-plugin-googlemaps-sdk": "git+https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git",
+    "cordova-plugin-googleplus": "^5.1.1",
+    "cordova-plugin-nativestorage": "^2.2.2",
+    "cordova-plugin-splashscreen": "^4.0.3",
+    "cordova-plugin-statusbar": "^2.2.2",
+    "cordova-plugin-whitelist": "^1.3.1",
+    "firebase": "^4.6.2",
     "ionic-angular": "3.7.0",
+    "ionic-plugin-keyboard": "^2.2.1",
     "ionicons": "3.0.0",
     "rxjs": "5.4.3",
     "sw-toolbox": "3.6.0",
@@ -34,5 +57,36 @@
     "@ionic/app-scripts": "3.0.0",
     "typescript": "2.3.4"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-facebook4": {
+        "APP_ID": "2107410809284834",
+        "APP_NAME": "Carpooling"
+      },
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-whitelist": {},
+      "ionic-plugin-keyboard": {},
+      "cordova-plugin-googlemaps": {
+        "API_KEY_FOR_ANDROID": "AIzaSyCI2ewjd4iLLQC8hUM9BkzH5H_9XUo0Dw4",
+        "API_KEY_FOR_IOS": "AIzaSyAGR-Y00wPIXxQQChdOEei0O2Ib2ElIaLU",
+        "LOCATION_WHEN_IN_USE_DESCRIPTION": "Show your location on the map",
+        "LOCATION_ALWAYS_USAGE_DESCRIPTION": "Trace your location on the map"
+      },
+      "cordova-plugin-googleplus": {
+        "REVERSED_CLIENT_ID": "com.googleusercontent.apps.925794387072-qlh5n10j1sff0ghtisvdp5u2k12cq4k8"
+      },
+      "cordova-plugin-firebase": {},
+      "cordova-plugin-geolocation": {
+        "GEOLOCATION_USAGE_DESCRIPTION": "To locate you"
+      },
+      "cordova-plugin-nativestorage": {}
+    },
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  }
 }
