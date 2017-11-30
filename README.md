@@ -15,7 +15,8 @@ This application provides the sharing of car journeys so that more than one pers
 * People who are passengers can search by the destination and request to join planned car journeys.
 * Every request by passengers depends on the drivers either to accept if they are comfortable to pick up or to reject if they are not.
 * In-app notifications are used to notify users when there is any request form passengers and any accept or rejection from drivers.
-* **Google Maps** is used to specify the location and determine where people are.
+* **Google Maps** is used to show the location and determine where people are.
+* **Google Places** is used to specify pick-up and drop-off location.
 * **Google Sign-In** and **Facebook API** are used for account creation.
 
 ## How to use this template
@@ -35,5 +36,6 @@ $ npm install
 $ ionic serve
 ```
 
+<img src="https://github.com/silapinbenz/hybrid-mobile-carpool/blob/master/Poster.png"/>
 
 
