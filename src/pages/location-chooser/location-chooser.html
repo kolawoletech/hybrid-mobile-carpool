@@ -10,9 +10,20 @@
     <ion-title>{{ pageTitle }}</ion-title>
   </ion-navbar>
 
+  <ion-searchbar #searchBar
+                 [(ngModel)]="input"
+                 (ionInput)="updateSearch()"
+                 (ionCancel)="dismiss()">
+  </ion-searchbar>
+
 </ion-header>
 
-
 <ion-content padding>
-
+  <ion-list>
+    <button ion-item *ngFor="let item of places" (click)="onChoosePlace(item)">
+      <ion-icon name="pin"
+                item-left></ion-icon>
+      {{ item.placeName }}
+    </button>
+  </ion-list>
 </ion-content>

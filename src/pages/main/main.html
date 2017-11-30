@@ -1,7 +1,6 @@
 <ion-header>
 
   <ion-navbar>
-
     <button ion-button
             menuToggle>
       <ion-icon name="menu"></ion-icon>
@@ -25,7 +24,7 @@
                       (click)="onChooseLocation(0)">
                 <ion-icon name="return-right"
                           item-left></ion-icon>
-                Your location
+                {{ pickupLocation.placeName }}
               </button>
 
               <hr>
@@ -34,7 +33,7 @@
                       (click)="onChooseLocation(1)">
                 <ion-icon name="pin"
                           item-left></ion-icon>
-                Destination
+                {{ dropoffLocation.placeName }}
               </button>
 
             </ion-list>

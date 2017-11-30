@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
-import { AngularFireDatabase } from 'angularfire2/database';
 import { User } from '../../pages/data/user.model';
+import { AngularFirestore } from 'angularfire2/firestore';
+import { AngularFireDatabase } from 'angularfire2/database';
 import { Journey } from '../../pages/data/journey.model';
 
 /*
@@ -13,24 +14,21 @@ import { Journey } from '../../pages/data/journey.model';
 @Injectable()
 export class FirebaseProvider {
 
-  constructor(public firebaseDatabase: AngularFireDatabase) {}
+  constructor(private afd: AngularFireDatabase, private afs: AngularFirestore) {}
 
   addUser(user: User) {
-    this.firebaseDatabase.list('users').push(user);
+    this.afd.list('users').push(user);
   }
 
   getUsers() {
-    return this.firebaseDatabase.object('users').valueChanges();
+    return this.afd.list('users').valueChanges();
   }
 
   createJourney(journey: Journey) {
-    this.firebaseDatabase.list('journeys').push(journey);
+    this.afd.list('journeys').push(journey);
   }
-
-  getJourneys() {
-    return this.firebaseDatabase.object('journeys').valueChanges();
-  }
-
-
-
+  //
+  // getJourneys() {
+  //   return this.afs.object('journeys').valueChanges();
+  // }
 }
